@@ -13,4 +13,10 @@ We recommend installing through the WordPress repository to receive automatic up
 
 ## Where's The Code?
 While we recommend non-technical folks use the WordPress plugin repository, techy folks and curious minds can explore releases under the tags folder. 
+
 Note, the trunk folder is used for development in this repository.
+
+## License
+All code and related source files released under GPLv3 license unless otherwise stated. Markdown documentation licensed under CC0. 
+
+Third party, bundled open source components and packaged PDFs licensed separately.
