@@ -17,6 +17,6 @@ While we recommend non-technical folks use the WordPress plugin repository, tech
 Note, the trunk folder is used for development in this repository.
 
 ## License
-All code and related source files released under GPLv3 license unless otherwise stated. Markdown documentation licensed under CC0. 
+All code and related source files released under GPLv3 license unless otherwise stated. Markdown documentation, articles, and photos licensed under CC0 unless otherwise stated.
 
 Third party, bundled open source components and packaged PDFs licensed separately.
