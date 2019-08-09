@@ -12,5 +12,5 @@ We recommend installing through the WordPress repository to receive automatic up
 3. Activate your new "Garrett County Planning Tool" plugin.
 
 ## Where's The Code?
-### While we recommend non-technical folks use the WordPress plugin repository, techy folks and curious minds can explore releases under the tags folder. 
-### Note, the trunk folder is used for development in this repository.
+While we recommend non-technical folks use the WordPress plugin repository, techy folks and curious minds can explore releases under the tags folder. 
+Note, the trunk folder is used for development in this repository.
