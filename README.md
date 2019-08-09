@@ -4,7 +4,7 @@ Garrett County Planning Tool - GCPT
 ## Installation
 We recommend installing through the WordPress repository to receive automatic updates.
 
-## Updating From 2018 UCPT
+## Updating From The UCPT (2018 Versions)
 1. Disable, but do NOT uninstall the UCPT plugins. 
    (Depending on the version you have, this may be either one UCPT plugin or three separate modules: UCPT Manager, UCPT Strategy Card, and UCPT Raw Data.)
 2. Search the WordPress plugin repository inside your admin panel (yoursite.com/wp-admin) under the plugins tab for "Garrett County Planning Tool"
