@@ -1,6 +1,8 @@
 # GCPT
 Garrett County Planning Tool - GCPT
 
+![Population Health Planning Tool](https://mygarrettcounty.com/wp-content/uploads/2019/08/mockup-of-three-browser-screenshots-floating-against-a-transparent-background-a15186.png)
+
 ## Installation
 We recommend installing through the WordPress repository to receive automatic updates.
 
