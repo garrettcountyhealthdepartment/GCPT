@@ -11,13 +11,13 @@ individual and community health.
 Instead of waiting every three years to conduct a formal assessment, anyone is invited to speak
 about the issues they struggle with as well as their greatest successes at any time. This dialogic
 communication creates a culture of responsiveness and helps shape programs, services, and
-better positions stakeholders to compete for funding opportunities using the hyperlocal data
+better positions stakeholders to compete for funding opportunities using the hyper local data
 reported on the Planning Tool. The insights gained from the extensive qualitative and
 quantitative data is vital because it helps to tell our story. In order to understand all the
 nuances of each person and the lived experience of our local heritage, we need opportunities
 to share who we are and what matters to us. In this context, data is the most meaningful if it
 mobilizes action. The Garrett County Planning Tool continues to demonstrate the power of
-transparency as it relates to both the collection and reporting of hyperlocal data to spur action.
+transparency as it relates to both the collection and reporting of hyper local data to spur action.
 
 My intention in the creation of this unique planning experience was to harness the local
 knowledge, care, and passion of the people in this community and turn it into a pure force for
