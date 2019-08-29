@@ -54,8 +54,7 @@ with our community. A collaboration between the Robert Wood Johnson
 Foundation and the University of Wisconsin Population Health Institute published a
 learning guide titled, Partnering with Residents-Getting Started*.
 
-* http://www.countyhealthrankings.org/take-action-to-improve-health/learning-guid
-es/partnering-with-residents
+* http://www.countyhealthrankings.org/take-action-to-improve-health/learning-guides/partnering-with-residents
 
 We suggest identifying a minimum of three active community champions as early in
 the process as possible to ensure everything from concept design to continued
