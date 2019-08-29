@@ -18,13 +18,11 @@ https://application.naccho.org/Public/Applications/View?id=2013
 
 ### All In Data for Community Health & Communities Joined in Action Webinar/Presentation
 
-https://allin.healthdoers.org/innovative-strategies-for-engaging-residents-in-comm
-unity-health-improvement-planning/
+https://allin.healthdoers.org/innovative-strategies-for-engaging-residents-in-community-health-improvement-planning/
 
 ### Robert Wood Johnson Foundation County Health Rankings & Roadmaps – Webinar: Innovation in Public Health
 
-http://www.countyhealthrankings.org/learn-from-others/webinars/innovation-in-pu
-blic-health-a-collaborative-planning-tool-for-increasing-equity-and-community
+http://www.countyhealthrankings.org/learn-from-others/webinars/innovation-in-public-health-a-collaborative-planning-tool-for-increasing-equity-and-community
 
 ### PHNCI – Highlighting Innovations in Public Health Video
 
@@ -32,8 +30,7 @@ https://vimeo.com/297969817
 
 ### Digital Platform Engages Local Communities and Addresses Public Health Concerns Early development article on PHNCI website.
 
-https://phnci.org/journal/digital-platform-engages-local-communities-and-addresse
-s-public-health-concerns
+https://phnci.org/journal/digital-platform-engages-local-communities-and-addresses-public-health-concerns
 
 ### PHNCI Innovation Replication Grant Program Project replication announcement.
 
@@ -45,35 +42,27 @@ https://phnci.org/journal/replicating-a-digital-community-engagement-innovation
 
 ### Podcast: An Equitable Approach to Community Health Planning in Garrett County, MD
 
-https://www.allindata.org/resources/podcast-equitable-approach-community-healt
-h-planning-garrett-county-md/
+https://www.allindata.org/resources/podcast-equitable-approach-community-health-planning-garrett-county-md/
 
 ### Public Health National Center for Innovations Awards $75 Thousand in Grants to Test Replication of Universal Community Planning Tool in Health Departments
 
-https://www.prweb.com/releases/public_health_national_center_for_innovations_a
-wards_75_thousand_in_grants_to_test_replication_of_universal_community_plannin
-g_tool_in_health_departments/prweb15631560.htm
+https://www.prweb.com/releases/public_health_national_center_for_innovations_awards_75_thousand_in_grants_to_test_replication_of_universal_community_planning_tool_in_health_departments/prweb15631560.htm
 
 ### Garrett County, Maryland 2017 RWJF Culture of Health Prize Winner
 
-https://www.rwjf.org/en/library/features/culture-of-health-prize/2017-winner-garret
-t-county-md.html
+https://www.rwjf.org/en/library/features/culture-of-health-prize/2017-winner-garrett-county-md.html
 
 ### Garrett County, Md. wins RWJF’s Culture of Health Prize
 
-https://www.naco.org/articles/garrett-county-md-wins-rwjf%E2%80%99s-culture-he
-alth-prize
+https://www.naco.org/articles/garrett-county-md-wins-rwjf%E2%80%99s-culture-health-prize
 
 ### Garrett County Health Department Receives National Award and Recognition for Innovative Practice to Improve Health Equity and Stakeholder Engagement
 
-https://www.prweb.com/releases/garrett_county_health_department_receives_nati
-onal_award_and_recognition_for_innovative_practice_to_improve_health_equity_an
-d_stakeholder_engagement/prweb15701377.htm
+https://www.prweb.com/releases/garrett_county_health_department_receives_national_award_and_recognition_for_innovative_practice_to_improve_health_equity_and_stakeholder_engagement/prweb15701377.htm
 
 ### Garrett County Team Wins Maryland Rural Health Achievement Award from MRHA
 
-https://garretthealth.org/garrett-county-team-wins-maryland-rural-health-achievem
-ent-award/
+https://garretthealth.org/garrett-county-team-wins-maryland-rural-health-achievement-award/
 
 ### Innovation Learning Community Case Studies
 
@@ -81,8 +70,7 @@ https://phnci.org/resources/innovation-learning-community-case-studies
 
 ### Partnering With Residents
 
-http://www.countyhealthrankings.org/take-action-to-improve-health/learning-guide
-s/partnering-with-residents
+http://www.countyhealthrankings.org/take-action-to-improve-health/learning-guides/partnering-with-residents
 
 ### What is Health Equity?
 
