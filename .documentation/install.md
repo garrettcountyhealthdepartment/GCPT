@@ -68,7 +68,7 @@ Now, repeat the same steps, going to the WordPress plugin page, clicking "Add Ne
 and searching for the Garrett County Planning Tool or GCPT. Then click "Install,"
 and finally click "Activate" after the installation completes.
 
-Step 5 - Configuring the GCPT
+### Step 5 - Configuring the GCPT
 
 It’s finally time to start customizing your Planning Tool for
 your own community! To get started, head to the options page named “GCPT” in the 
@@ -86,7 +86,7 @@ Garrett County’s pilot started with 3 measures, then 5, then 10, and finally t
 This enabled us to grow confidently, and worry less about large traffic spikes
 caused by highly effective marketing campaigns.
 
-Step 6 - Extending the GCPT
+### Step 6 - Extending the GCPT
 
 Congratulations! Your Garrett County Planning Tool (GCPT) is ready to go! We
 wish you the best of luck, and forward our sincerest appreciation for the work
