@@ -52,7 +52,7 @@ prepare you to install the GCPT.
 In order to use the free, open source Garrett County Planning Tool (GCPT)
 plugins, you’ll need to activate BuddyPress groups. This feature of the BuddyPress
 framework allows your users to be organized into groups and provides a space for
-the UCPT plugins to work their magic. To enable BuddyPress groups, navigate to
+the GCPT plugins to work their magic. To enable BuddyPress groups, navigate to
 “Settings” -> “BuddyPress” in your WordPress administration panel (yoursite.com/wp-admin).
 
 Ensure that the “User Groups” checkbox is active, and optionally select any other 
