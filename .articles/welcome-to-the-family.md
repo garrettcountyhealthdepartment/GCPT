@@ -19,7 +19,7 @@ community.
 
 The GCPT collects both qualitative and quantitative data on the front
 end. Generates data visualizations based upon hyper local measures
-for every user increasing community access. Finally, gives us the ability
+for every user increasing community access. Finally, it gives us the ability
 to measure community engagement and a plethora of other insights
 through analytics.
 
