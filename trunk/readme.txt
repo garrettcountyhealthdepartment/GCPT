@@ -1,10 +1,10 @@
 === Garrett County Planning Tool (GCPT) ===
 Contributors: garrettcountyhealthdepartment
 Tags: public health, population health, buddypress, community, planning, health, social, data, raw data, chart, table
-Requires at least: 5.2.2
-Tested up to: 5.2.2
+Requires at least: 5.2.3
+Tested up to: 5.2.3
 Requires PHP: 7.0
-Stable tag: 19.3.1
+Stable tag: 19.4.1
 License: GPL v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
