@@ -1,7 +1,5 @@
 # Garrett County Planning Tool (GCPT) – Public Health and Population Health Data and Planning Tool
 
-![GCPT](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/icon-256x256.png)
-
 ![Demo](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/screenshot-1.gif)
 
 
