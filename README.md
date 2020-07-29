@@ -1,7 +1,11 @@
 # GCPT
 Garrett County Planning Tool - GCPT
+![GCPT](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/icon-256x256.png)
 
-![Population Health Planning Tool](https://mygarrettcounty.com/wp-content/uploads/2019/08/mockup-of-three-browser-screenshots-floating-against-a-transparent-background-a15186.png)
+![Population Health Planning Tool](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/banner-772x250.png)
+
+![Demo](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/screenshot-1.gif)
+
 
 ## Installation
 We recommend installing through the WordPress repository to receive automatic updates.
