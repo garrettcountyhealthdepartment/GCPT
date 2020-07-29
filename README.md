@@ -2,8 +2,6 @@
 
 ![GCPT](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/icon-256x256.png)
 
-![Population Health Planning Tool](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/banner-772x250.png)
-
 ![Demo](https://raw.githubusercontent.com/garrettcountyhealthdepartment/GCPT/master/assets/screenshot-1.gif)
 
 
