@@ -5,10 +5,10 @@ Plugin URI: https://mygarrettcounty.com
 Author: Garrett County Health Department
 Author URI: https://garretthealth.org
 Description: This plug-in is an open source population health framework built in Garrett County, Maryland, merged with the UCPT.
-Version: 20.1
+Version: 21.3
 Text Domain: ucpt
-Requires at least: 5.2.3
-Tested up to: 5.4.2
+Requires at least: 5.7
+Tested up to: 5.7.1
 License: GPL v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -118,41 +118,41 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	}
 
 	function ucpt_manage_settings_init(  ) { 
-		register_setting( 'pluginPage', 'ucpt_manage_settings' );
+		register_setting( 'ucpt_pluginPage', 'ucpt_manage_settings' );
 		add_settings_section(
-			'ucpt_manage_pluginPage_section', 
+			'ucpt_manage_ucpt_pluginPage_section', 
 			__( 'GCPT Configuration', 'ucpt_manage' ), 
 			'ucpt_manage_settings_section_callback', 
-			'pluginPage'
+			'ucpt_pluginPage'
 		);
 		add_settings_field( 
 			'ucpt_manage_credits', 
 			__( 'Show credits?', 'ucpt_manage' ), 
 			'ucpt_manage_credits_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 		);
 		add_settings_field( 
 			'ucpt_manage_start_date', 
 			__( 'UCPT Data Start Date', 'ucpt_manage' ), 
 			'ucpt_manage_start_date_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 		);
 		add_settings_field( 
 			'ucpt_manage_measure_number', 
 			__( 'UCPT Measure Number', 'ucpt_manage' ), 
 			'ucpt_manage_measure_number_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 		);
 		for ($i = 1; $i <= 10; $i++) {
 			add_settings_field( 
 			'ucpt_manage_priority_' . $i, 
 			__( 'Priority Focus Area #' . $i, 'ucpt_manage' ), 
 			'ucpt_manage_priority_' . $i . '_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 			);
 		}
 		for ($e = 1; $e <= 15; $e++) {
@@ -160,8 +160,17 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 			'ucpt_manage_custom_categories_' . $e, 
 			__( 'Custom Data Category #' . $e, 'ucpt_manage' ), 
 			'ucpt_manage_custom_categories_' . $e . '_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
+			);
+		}
+		for ($phe = 1; $phe <= 10; $phe++) {
+			add_settings_field( 
+			'ucpt_manage_custom_sp_' . $phe, 
+			__( 'Custom Strategic Planning Alignment #' . $phe, 'ucpt_manage' ), 
+			'ucpt_manage_custom_sp_' . $phe . '_render', 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 			);
 		}
 		for ($o = 1; $o <= 10; $o++) {
@@ -169,8 +178,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 			'ucpt_manage_custom_embed_' . $o, 
 			__( 'Custom Embed Host URL #' . $o . ' (i.e.; http://google.com/)', 'ucpt_manage' ), 
 			'ucpt_manage_custom_embed_' . $o . '_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 			);
 		}			
 		for ($g = 1; $g <= 10; $g++) {
@@ -178,8 +187,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 			'ucpt_manage_custom_location_' . $g, 
 			__( 'Custom Location ' . $g . ' (i.e.; 21550, Garrett County, etc...)', 'ucpt_manage' ), 
 			'ucpt_manage_custom_location_' . $g . '_render', 
-			'pluginPage', 
-			'ucpt_manage_pluginPage_section' 
+			'ucpt_pluginPage', 
+			'ucpt_manage_ucpt_pluginPage_section' 
 			);
 		}			
 	}
@@ -273,6 +282,36 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	function ucpt_manage_custom_categories_15_render(  ) { 
 		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_categories_15]" value="' . UCPT_OPTIONS['ucpt_manage_custom_categories_15'] . '">';
 	}
+	function ucpt_manage_custom_sp_1_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_1]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_1'] . '">';
+	}
+	function ucpt_manage_custom_sp_2_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_2]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_2'] . '">';
+	}
+	function ucpt_manage_custom_sp_3_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_3]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_3'] . '">';
+	}
+	function ucpt_manage_custom_sp_4_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_4]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_4'] . '">';
+	}
+	function ucpt_manage_custom_sp_5_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_5]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_5'] . '">';
+	}
+	function ucpt_manage_custom_sp_6_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_6]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_6'] . '">';
+	}
+	function ucpt_manage_custom_sp_7_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_7]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_7'] . '">';
+	}
+	function ucpt_manage_custom_sp_8_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_8]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_8'] . '">';
+	}
+	function ucpt_manage_custom_sp_9_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_9]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_9'] . '">';
+	}
+	function ucpt_manage_custom_sp_10_render(  ) { 
+		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_sp_10]" value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_10'] . '">';
+	}
 	function ucpt_manage_custom_embed_1_render(  ) { 
 		echo '<input type="text" name="ucpt_manage_settings[ucpt_manage_custom_embed_1]" value="' . UCPT_OPTIONS['ucpt_manage_custom_embed_1'] . '">';
 	}
@@ -339,8 +378,8 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 	
 	function ucpt_manage_options_page(  ) { 
 		echo '<form action="options.php" method="post">';
-		settings_fields( 'pluginPage' );
-		do_settings_sections( 'pluginPage' );
+		settings_fields( 'ucpt_pluginPage' );
+		do_settings_sections( 'ucpt_pluginPage' );
 		submit_button();
 		echo '</form>';
 	}
@@ -386,7 +425,68 @@ Strategy Cards
 
 						<label for="ucpt_desc"><h3>Strategy Description</h3></label>
 							<?php wp_editor( ucpt_custom_field_meta('ucpt_desc'), 'ucpt_desc', UCPT_EDITOR_SETTINGS ); ?> 
-
+						<?php 
+							$max_strategies = 5;
+							for ($i = 1; $i <= $max_strategies; $i++) {
+						?>
+							<label for="ucpt_strategies_<?php echo $i; ?>"><h3>Strategy #<?php echo $i; ?></h3></label>
+								<input id="ucpt_strategies_<?php echo $i; ?>" type="text" name="ucpt_strategies_<?php echo $i; ?>" placeholder="Specific Strategy #<?php echo $i; ?>" value="<?php echo ucpt_custom_field_meta('ucpt_strategies_' . $i); ?>" />		
+							<div class="nest">
+							<?php 
+								$max_objectives = 5;
+								for ($objectives = 1; $objectives <= $max_objectives; $objectives++) {
+							?>
+								<label for="ucpt_objectives_<?php echo $i; ?>_<?php echo $objectives; ?>"><h3>Objective #<?php echo $i; ?>-<?php echo $objectives; ?></h3></label>
+									<input id="ucpt_objectives_<?php echo $i; ?>_<?php echo $objectives; ?>" type="text" name="ucpt_objectives_<?php echo $i; ?>_<?php echo $objectives; ?>" placeholder="Objective #<?php echo $i; ?>-<?php echo $objectives; ?>" value="<?php echo ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives); ?>" />	
+									<div class="nest">
+										<p>
+										Time-Framed Target Measure: 
+										<?php
+										$ucpt_build_tft_measure = ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives . '_tft');
+										?>
+										<select name="ucpt_objectives_<?php echo $i; ?>_<?php echo $objectives; ?>_tft">
+											<?php
+												if ($ucpt_build_tft_measure != "") {
+											?>
+											<option value="<?php echo $ucpt_build_tft_measure; ?>"><?php echo ucpt_custom_field_meta($ucpt_build_tft_measure); ?></option>
+											<?php
+												}
+												if ($ucpt_build_tft_measure == "") {
+											?>
+													<option value="">Please set measures under your raw data tab first. If this is a new group, you'll do that on the next screen.</option>
+											<?php
+												}
+											$max_measures = UCPT_OPTIONS['ucpt_manage_measure_number'];
+											for ($mm = 1; $mm <= $max_measures; $mm++) {
+												if (ucpt_custom_field_meta('ucpt_measure_' . $mm . '') != "") {
+												$current_mm = 'ucpt_measure_' . $mm;
+											?>
+												<option value="<?php echo $current_mm ?>"><?php echo ucpt_custom_field_meta($current_mm); ?></option>
+											<?php 
+												}
+											}
+											?>
+										</select>
+										</p>
+										<p>
+										Time-Framed Target Goal: 
+										<?php 
+										$ucpt_build_tft_goal = ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives . '_tft') . '_goal';
+											if (ucpt_custom_field_meta($ucpt_build_tft_goal) == "") {
+												echo 'After you set a Time-Framed Target Measure, the goal number set under the raw data tab will populate here.';
+											}
+											echo ucpt_custom_field_meta($ucpt_build_tft_goal); 
+										?>
+										</p>
+										Objective Time-Frame Target Date: <input id="ucpt_objectives_<?php echo $i; ?>_<?php echo $objectives; ?>_date" type="date" name="ucpt_objectives_<?php echo $i; ?>_<?php echo $objectives; ?>_date" value="<?php echo ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives .'_date'); ?>" />
+									</div>
+							<?php
+								}
+							?>
+							</div>
+						<?php
+							}
+						?>
 						<label for="ucpt_level"><h3>Level of Change</h3></label>
 							<select name="ucpt_level">
 								<option value="<?php echo ucpt_custom_field_meta('ucpt_level'); ?>"><?php echo ucpt_custom_field_meta('ucpt_level'); ?></option>
@@ -420,6 +520,25 @@ Strategy Cards
 								}
 								?>
 								<option value="">Reset the Data Category Tag to blank.</option>
+							</select>
+						<?php
+							}
+						?>
+						
+						<?php
+							if (UCPT_OPTIONS['ucpt_manage_custom_sp_1'] != "") {	
+						?>
+						<label for="ucpt_sp"><h3>Strategic Planning Alignment</h3></label>
+							<select name="ucpt_sp" style="max-width:90%;">
+								<option value="<?php echo ucpt_custom_field_meta('ucpt_sp'); ?>"><?php echo ucpt_custom_field_meta('ucpt_sp'); ?></option>
+								<?php
+								for ($i = 1; $i <= 10; $i++) {
+									if (UCPT_OPTIONS['ucpt_manage_custom_sp_' . $i] != "") {
+										echo '<option value="' . UCPT_OPTIONS['ucpt_manage_custom_sp_' . $i] . '">' . UCPT_OPTIONS['ucpt_manage_custom_sp_' . $i] . '</option>';
+									}
+								}
+								?>
+								<option value="">Reset the Strategic Planning Alignment to blank.</option>
 							</select>
 						<?php
 							}
@@ -460,6 +579,10 @@ Strategy Cards
 								<option value="Low">Low</option>
 								<option value="Very Low">Very Low</option>
 							</select>
+							
+						<label for="ucpt_health_equity"><h3>Health Equity</h3></label>
+							<p>How are you considering health equity, including the social determinants of health, in this initiative?</p>
+							<?php wp_editor( ucpt_custom_field_meta('ucpt_health_equity'), 'ucpt_health_equity', UCPT_EDITOR_SETTINGS ); ?> 
 
 						<label for="ucpt_research"><h3>Research</h3></label>
 							<?php wp_editor( ucpt_custom_field_meta('ucpt_research'), 'ucpt_research', UCPT_EDITOR_SETTINGS ); ?> 
@@ -471,14 +594,96 @@ Strategy Cards
 						$plain_fields = array(
 							'ucpt_goal',
 							'ucpt_desc',
+							'ucpt_strategies_1',
+							'ucpt_strategies_2',
+							'ucpt_strategies_3',
+							'ucpt_strategies_4',
+							'ucpt_strategies_5',
+							'ucpt_objectives_1_1',
+							'ucpt_objectives_1_2',
+							'ucpt_objectives_1_3',
+							'ucpt_objectives_1_4',
+							'ucpt_objectives_1_5',
+							'ucpt_objectives_2_1',
+							'ucpt_objectives_2_2',
+							'ucpt_objectives_2_3',
+							'ucpt_objectives_2_4',
+							'ucpt_objectives_2_5',
+							'ucpt_objectives_3_1',
+							'ucpt_objectives_3_2',
+							'ucpt_objectives_3_3',
+							'ucpt_objectives_3_4',
+							'ucpt_objectives_3_5',
+							'ucpt_objectives_4_1',
+							'ucpt_objectives_4_2',
+							'ucpt_objectives_4_3',
+							'ucpt_objectives_4_4',
+							'ucpt_objectives_4_5',
+							'ucpt_objectives_5_1',
+							'ucpt_objectives_5_2',
+							'ucpt_objectives_5_3',
+							'ucpt_objectives_5_4',
+							'ucpt_objectives_5_5',
+							'ucpt_objectives_1_1_date',
+							'ucpt_objectives_1_2_date',
+							'ucpt_objectives_1_3_date',
+							'ucpt_objectives_1_4_date',
+							'ucpt_objectives_1_5_date',
+							'ucpt_objectives_2_1_date',
+							'ucpt_objectives_2_2_date',
+							'ucpt_objectives_2_3_date',
+							'ucpt_objectives_2_4_date',
+							'ucpt_objectives_2_5_date',
+							'ucpt_objectives_3_1_date',
+							'ucpt_objectives_3_2_date',
+							'ucpt_objectives_3_3_date',
+							'ucpt_objectives_3_4_date',
+							'ucpt_objectives_3_5_date',
+							'ucpt_objectives_4_1_date',
+							'ucpt_objectives_4_2_date',
+							'ucpt_objectives_4_3_date',
+							'ucpt_objectives_4_4_date',
+							'ucpt_objectives_4_5_date',
+							'ucpt_objectives_5_1_date',
+							'ucpt_objectives_5_2_date',
+							'ucpt_objectives_5_3_date',
+							'ucpt_objectives_5_4_date',
+							'ucpt_objectives_5_5_date',
+							'ucpt_objectives_1_1_tft',
+							'ucpt_objectives_1_2_tft',
+							'ucpt_objectives_1_3_tft',
+							'ucpt_objectives_1_4_tft',
+							'ucpt_objectives_1_5_tft',
+							'ucpt_objectives_2_1_tft',
+							'ucpt_objectives_2_2_tft',
+							'ucpt_objectives_2_3_tft',
+							'ucpt_objectives_2_4_tft',
+							'ucpt_objectives_2_5_tft',
+							'ucpt_objectives_3_1_tft',
+							'ucpt_objectives_3_2_tft',
+							'ucpt_objectives_3_3_tft',
+							'ucpt_objectives_3_4_tft',
+							'ucpt_objectives_3_5_tft',
+							'ucpt_objectives_4_1_tft',
+							'ucpt_objectives_4_2_tft',
+							'ucpt_objectives_4_3_tft',
+							'ucpt_objectives_4_4_tft',
+							'ucpt_objectives_4_5_tft',
+							'ucpt_objectives_5_1_tft',
+							'ucpt_objectives_5_2_tft',
+							'ucpt_objectives_5_3_tft',
+							'ucpt_objectives_5_4_tft',
+							'ucpt_objectives_5_5_tft',
 							'ucpt_level',
 							'ucpt_focus',
 							'ucpt_category',
+							'ucpt_sp',
 							'ucpt_date_start',
 							'ucpt_date_end',
 							'ucpt_cis_ease',
 							'ucpt_cis_cost',
 							'ucpt_cis_benefit',
+							'ucpt_health_equity',
 							'ucpt_research'
 						);
 						foreach( $plain_fields as $field ) {
@@ -510,12 +715,129 @@ Strategy Cards
 						<?php
 						}
 						?>
-						<div style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('<?php echo $ucpt_cover; ?>'); background-size:100%; width=100%; min-height: 150px; padding: 30px;"><div style="font-size: 32px; color: #fff;">Health Improvement Strategy</div><br /><div style="font-size: 18px; color: #efefef;">"<?php echo $ucpt_group_name; ?>"</div><br/><div style="font-size: 10px; color: #efefef;">"<?php echo $ucpt_perma; ?>"</div></div>
+						<div style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('<?php echo $ucpt_cover; ?>'); background-size:100%; width=100%; min-height: 150px; padding: 30px;"><div style="font-size: 32px; color: #fff;">Health Improvement Strategy</div><br /><div style="font-size: 18px; color: #efefef;"><?php echo $ucpt_group_name; ?></div><br/><div style="font-size: 10px; color: #efefef;"><?php echo $ucpt_perma; ?></div></div>
 						<div class="division">
 						<p><h3>Goal:</h3> <?php echo ucpt_custom_field_meta("ucpt_goal"); ?></p>
 						</div>
 						<div class="division">
 						<p><h3>Strategy Description:</h3> <?php echo ucpt_custom_field_meta("ucpt_desc"); ?></p>
+						</div>
+						<div class="division">
+						<p><h3>Strategies and Objectives:</h3>
+						<?php 
+							$max_strategies = 5;
+							for ($i = 1; $i <= $max_strategies; $i++) {
+								if (ucpt_custom_field_meta("ucpt_strategies_" . $i) != "") {
+						?>
+								<div class="nest-section">
+									<h5>Strategy #<?php echo $i; ?>: <?php echo ucpt_custom_field_meta("ucpt_strategies_" . $i); ?></h5>
+										<?php 
+											$max_objectives = 5;
+											for ($objectives = 1; $objectives <= $max_objectives; $objectives++) {
+												if (ucpt_custom_field_meta("ucpt_objectives_" . $i . "_" . $objectives) != "") {
+										?>
+												<div class="nest"><u><strong>Objective #<?php echo $objectives; ?>: <?php echo ucpt_custom_field_meta("ucpt_objectives_" . $i . "_" . $objectives); ?></strong></u>
+													<div class="nest">
+													<?php
+													$ucpt_build_tft_measure = ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives . '_tft');
+													if ($ucpt_build_tft_measure != "") {
+													?>
+														<p><em>Objective Time-Frame Target Measure: <?php echo ucpt_custom_field_meta($ucpt_build_tft_measure); ?></em></p>
+														<p><small><strong>Objective Time-Frame Target Goal: <?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_goal'); ?></strong></small></p>
+														<p><small><em>Objective Time-Frame Target Date: <?php echo ucpt_custom_field_meta("ucpt_objectives_" . $i . "_" . $objectives . "_date"); ?></em></small></p>
+														<?php
+															$ucpt_time = UCPT_OPTIONS['ucpt_manage_start_date'];
+															$ucpt_start_date = date('Y', strtotime($ucpt_time));
+															$ucpt_current_date = date('Y');
+															$ucpt_cycle = ($ucpt_current_date - $ucpt_start_date) + 1;	
+															$ucpt_build_tft_measure = ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives . '_tft');
+															if ($ucpt_build_tft_measure != "") {
+															$ucpt_build_tft_measure_number = (int) filter_var($ucpt_build_tft_measure, FILTER_SANITIZE_NUMBER_INT);
+																while ($ucpt_cycle >= 1) {
+														?>
+																<p>
+																	<div class="mini-table">
+																		<table id="measure-ap" border="1" bordercolor="#ededed" width="100%">
+																			<thead>
+																				<tr>
+																					<th style="background-color:#fff;">Measure</th>
+																					<th>Target Goal</th>
+																					<th>Status</th>
+																					<th>Desired Trend</th>
+																					<th>Contributor</th>
+																						<th>January <?php echo $ucpt_current_date ?></th>
+																						<th>February <?php echo $ucpt_current_date ?></th>
+																						<th>March <?php echo $ucpt_current_date ?></th>
+																						<th>April <?php echo $ucpt_current_date ?></th>
+																						<th>May <?php echo $ucpt_current_date ?></th>
+																						<th>June <?php echo $ucpt_current_date ?></th>
+																						<th>July <?php echo $ucpt_current_date ?></th>
+																						<th>August <?php echo $ucpt_current_date ?></th>
+																						<th>September <?php echo $ucpt_current_date ?></th>
+																						<th>October <?php echo $ucpt_current_date ?></th>
+																						<th>November <?php echo $ucpt_current_date ?></th>
+																						<th>December <?php echo $ucpt_current_date ?></th>
+																			</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td>
+																						<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure); ?>
+																					</td>
+																					<td>
+																						<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_goal'); ?>
+																					</td>
+																					<td>
+																					<?php if (ucpt_custom_field_meta($ucpt_build_tft_measure . '_status') == "Archived") { ?>
+																						<span style="background-color: #d71616; color: #fff; padding: 3px; ">Archived</span>
+																						<?php } else { ?>
+																						<span style="background-color: #129f49; color: #fff; padding: 3px; ">Active</span>
+																					<?php } ?>
+																					</td>
+																					<td>
+																						<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_trend'); ?>
+																					</td>
+																					<td>
+																						<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_contributor'); ?>
+																					</td>
+																					<?php
+																					$max_measures = UCPT_OPTIONS['ucpt_manage_measure_number'];
+
+																						$y = $ucpt_time_count + 1;
+																							for ($m = 1; $m <= 12; $m++) {
+																						?>											
+																							<td>
+																								<?php echo ucpt_custom_field_meta('ucpt_m_' . $ucpt_build_tft_measure_number . '_y' . $ucpt_cycle . '_m' . $m . ''); ?>
+																							</td>
+																						<?php
+																							}
+
+																					?>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																	<em><small>View the full data for this objective (including larger text size) at: <a href="<?php echo $ucpt_perma; ?>raw-data"><?php echo $ucpt_perma; ?>raw-data</a>.</small></em>
+																</p>
+													<?php
+																$ucpt_current_date--;
+																$ucpt_cycle--;
+																}
+															}
+														}
+													?>
+													</div>
+												</div>
+								<?php
+												}
+											}
+								?>
+								</div>
+						<?php
+								}
+							}
+						?>
+						</p>
 						</div>
 						<div class="division">
 						<p><h3>Level of Change:</h3> <?php echo ucpt_custom_field_meta("ucpt_level"); ?></p>
@@ -525,6 +847,9 @@ Strategy Cards
 						</div>
 						<div class="division">
 						<p><h3>Data Category Tag:</h3> <?php echo ucpt_custom_field_meta("ucpt_category"); ?></p>
+						</div>
+						<div class="division">
+						<p><h3>Strategic Planning Alignment:</h3> <?php echo ucpt_custom_field_meta("ucpt_sp"); ?></p>
 						</div>
 						<div class="division">
 						<p><h3>Estimated Implementation Date:</h3> <?php echo ucpt_custom_field_meta("ucpt_date_start"); ?></p>
@@ -540,6 +865,9 @@ Strategy Cards
 						</div>
 						<div class="division">
 						<p><h3>Potential Community Benefit:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_benefit"); ?></p>
+						</div>
+						<div class="division">
+						<p><h3>Health Equity:</h3> <?php echo ucpt_custom_field_meta("ucpt_health_equity"); ?></p>
 						</div>
 						<div class="division">
 						<p><h3>Research:</h3> <?php echo ucpt_custom_field_meta("ucpt_research"); ?></p>
@@ -795,7 +1123,7 @@ Raw Data +
 					</p>
 					<?php
 					}
-					echo "<div style='background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(" . $ucpt_cover . "); background-size:100%; width=100%; min-height: 150px; padding: 30px;'><div style='font-size: 32px; color: #fff;'>Raw Data +</div><br /><div style='font-size: 18px; color: #efefef;'>" . $ucpt_group_name . "</div><br/><div style='font-size: 10px; color: #efefef;'>" . $ucpt_perma ."</div></div>";
+					echo "<div style='background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(" . $ucpt_cover . "); background-size:100%; width=100%; min-height: 150px; padding: 30px;'><div style='font-size: 32px; color: #fff;'>Raw Data +</div><br /><div style='font-size: 18px; color: #efefef;'>" . $ucpt_group_name . "</div><br/><div style='font-size: 10px; color: #efefef;'>" . $ucpt_perma ."</div></div>";
 					?>
 					<script>
 					$(document).ready( function () {
@@ -1139,7 +1467,7 @@ CHIP
 					$args = array(
 						'slug' => 'chip',
 						'name' => 'CHIP Dash',
-						'nav_item_position' => 42
+						'nav_item_position' => 45
 					);
 					parent::init( $args );
 				}
@@ -1203,39 +1531,181 @@ CHIP
 						$ucpt_perma = bp_get_group_permalink( $bp->groups->current_group );
 						$ucpt_avatar = 	bp_get_group_avatar( 'type=full&width=15&height=15' );
 						?>
-						<div style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('<?php echo $ucpt_cover; ?>'); background-size:100%; width=100%; min-height: 150px; padding: 30px;"><div style="font-size: 32px; color: #fff;">Health Improvement Strategy</div><br /><div style="font-size: 18px; color: #efefef;">"<?php echo $ucpt_group_name; ?>"</div><br/><div style="font-size: 10px; color: #efefef;">"<?php echo $ucpt_perma; ?>"</div></div>
-						<div class="division">
-						<p><h3>Goal:</h3> <?php echo ucpt_custom_field_meta("ucpt_goal"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Strategy Description:</h3> <?php echo ucpt_custom_field_meta("ucpt_desc"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Level of Change:</h3> <?php echo ucpt_custom_field_meta("ucpt_level"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Primary Focus Area:</h3> <?php echo ucpt_custom_field_meta("ucpt_focus"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Data Category Tag:</h3> <?php echo ucpt_custom_field_meta("ucpt_category"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Estimated Implementation Date:</h3> <?php echo ucpt_custom_field_meta("ucpt_date_start"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Estimated Completion Date:</h3> <?php echo ucpt_custom_field_meta("ucpt_date_end"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Estimated Ease of Implementation:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_ease"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Estimated Cost of Implementation:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_cost"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Potential Community Benefit:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_benefit"); ?></p>
-						</div>
-						<div class="division">
-						<p><h3>Research:</h3> <?php echo ucpt_custom_field_meta("ucpt_research"); ?></p>
+						<p><input name="printX" id="printX" type="button" onClick="printX('printCHIP');" value="Print CHIP Quick View"></p>
+						<div id="printCHIP">
+							<div style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('<?php echo $ucpt_cover; ?>'); background-size:100%; width=100%; min-height: 150px; padding: 30px;"><div style="font-size: 32px; color: #fff;">Health Improvement Strategy</div><br /><div style="font-size: 18px; color: #efefef;"><?php echo $ucpt_group_name; ?></div><br/><div style="font-size: 10px; color: #efefef;"><?php echo $ucpt_perma; ?></div></div>
+							<div class="division">
+							<p><h3>Goal:</h3> <?php echo ucpt_custom_field_meta("ucpt_goal"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Strategy Description:</h3> <?php echo ucpt_custom_field_meta("ucpt_desc"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Strategies and Objectives:</h3>
+							<?php 
+								$max_strategies = 5;
+								for ($i = 1; $i <= $max_strategies; $i++) {
+									if (ucpt_custom_field_meta("ucpt_strategies_" . $i) != "") {
+							?>
+									<div class="nest-section">
+										<h5>Strategy #<?php echo $i; ?>: <?php echo ucpt_custom_field_meta("ucpt_strategies_" . $i); ?></h5>
+											<?php 
+												$max_objectives = 5;
+												for ($objectives = 1; $objectives <= $max_objectives; $objectives++) {
+													if (ucpt_custom_field_meta("ucpt_objectives_" . $i . "_" . $objectives) != "") {
+											?>
+													<div class="nest"><u><strong>Objective #<?php echo $objectives; ?>: <?php echo ucpt_custom_field_meta("ucpt_objectives_" . $i . "_" . $objectives); ?></strong></u>
+														<div class="nest">
+														<?php
+														$ucpt_build_tft_measure = ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives . '_tft');
+														if ($ucpt_build_tft_measure != "") {
+														?>
+															<p><em>Objective Time-Frame Target Measure: <?php echo ucpt_custom_field_meta($ucpt_build_tft_measure); ?></em></p>
+															<p><small><strong>Objective Time-Frame Target Goal: <?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_goal'); ?></strong></small></p>
+															<p><small><em>Objective Time-Frame Target Date: <?php echo ucpt_custom_field_meta("ucpt_objectives_" . $i . "_" . $objectives . "_date"); ?></em></small></p>
+															<?php
+																$ucpt_time = UCPT_OPTIONS['ucpt_manage_start_date'];
+																$ucpt_start_date = date('Y', strtotime($ucpt_time));
+																$ucpt_current_date = date('Y');
+																$ucpt_cycle = ($ucpt_current_date - $ucpt_start_date) + 1;	
+																$ucpt_build_tft_measure = ucpt_custom_field_meta('ucpt_objectives_' . $i . '_' . $objectives . '_tft');
+																if ($ucpt_build_tft_measure != "") {
+																$ucpt_build_tft_measure_number = (int) filter_var($ucpt_build_tft_measure, FILTER_SANITIZE_NUMBER_INT);
+																	while ($ucpt_cycle >= 1) {
+															?>
+																	<p>
+																		<div class="mini-table">
+																			<table id="measure-ap" border="1" bordercolor="#ededed" width="100%">
+																				<thead>
+																					<tr>
+																						<th style="background-color:#fff;">Measure</th>
+																						<th>Target Goal</th>
+																						<th>Status</th>
+																						<th>Desired Trend</th>
+																						<th>Contributor</th>
+																							<th>January <?php echo $ucpt_current_date ?></th>
+																							<th>February <?php echo $ucpt_current_date ?></th>
+																							<th>March <?php echo $ucpt_current_date ?></th>
+																							<th>April <?php echo $ucpt_current_date ?></th>
+																							<th>May <?php echo $ucpt_current_date ?></th>
+																							<th>June <?php echo $ucpt_current_date ?></th>
+																							<th>July <?php echo $ucpt_current_date ?></th>
+																							<th>August <?php echo $ucpt_current_date ?></th>
+																							<th>September <?php echo $ucpt_current_date ?></th>
+																							<th>October <?php echo $ucpt_current_date ?></th>
+																							<th>November <?php echo $ucpt_current_date ?></th>
+																							<th>December <?php echo $ucpt_current_date ?></th>
+																				</tr>
+																				</thead>
+																				<tbody>
+																					<tr>
+																						<td>
+																							<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure); ?>
+																						</td>
+																						<td>
+																							<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_goal'); ?>
+																						</td>
+																						<td>
+																						<?php if (ucpt_custom_field_meta($ucpt_build_tft_measure . '_status') == "Archived") { ?>
+																							<span style="background-color: #d71616; color: #fff; padding: 3px; ">Archived</span>
+																							<?php } else { ?>
+																							<span style="background-color: #129f49; color: #fff; padding: 3px; ">Active</span>
+																						<?php } ?>
+																						</td>
+																						<td>
+																							<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_trend'); ?>
+																						</td>
+																						<td>
+																							<?php echo ucpt_custom_field_meta($ucpt_build_tft_measure . '_contributor'); ?>
+																						</td>
+																						<?php
+																						$max_measures = UCPT_OPTIONS['ucpt_manage_measure_number'];
+
+																							$y = $ucpt_time_count + 1;
+																								for ($m = 1; $m <= 12; $m++) {
+																							?>											
+																								<td>
+																									<?php echo ucpt_custom_field_meta('ucpt_m_' . $ucpt_build_tft_measure_number . '_y' . $ucpt_cycle . '_m' . $m . ''); ?>
+																								</td>
+																							<?php
+																								}
+
+																						?>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																		<em><small>View the full data for this objective (including larger text size) at: <a href="<?php echo $ucpt_perma; ?>raw-data"><?php echo $ucpt_perma; ?>raw-data</a>.</small></em>
+																	</p>
+														<?php
+																	$ucpt_current_date--;
+																	$ucpt_cycle--;
+																	}
+																}
+															}
+														?>
+														</div>
+													</div>
+									<?php
+													}
+												}
+									?>
+									</div>
+								<?php
+										}
+									}
+								?>
+							</p>
+							</div>
+							<div class="division">
+							<p><h3>Level of Change:</h3> <?php echo ucpt_custom_field_meta("ucpt_level"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Primary Focus Area:</h3> <?php echo ucpt_custom_field_meta("ucpt_focus"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Data Category Tag:</h3> <?php echo ucpt_custom_field_meta("ucpt_category"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Strategic Planning Alignment:</h3> <?php echo ucpt_custom_field_meta("ucpt_sp"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Estimated Implementation Date:</h3> <?php echo ucpt_custom_field_meta("ucpt_date_start"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Estimated Completion Date:</h3> <?php echo ucpt_custom_field_meta("ucpt_date_end"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Estimated Ease of Implementation:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_ease"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Estimated Cost of Implementation:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_cost"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Potential Community Benefit:</h3> <?php echo ucpt_custom_field_meta("ucpt_cis_benefit"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Health Equity:</h3> <?php echo ucpt_custom_field_meta("ucpt_health_equity"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Research:</h3> <?php echo ucpt_custom_field_meta("ucpt_research"); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Last Modification</h3>
+							<?php echo ucpt_custom_field_meta('ucpt_data_edit_log'); ?></p>
+							</div>
+							<div class="division">
+							<p><h3>Contributing Community Participants</h3>
+									<?php 
+										if ( bp_group_has_members( 'group_id='.bp_get_group_id().'&exclude_admins_mods=0&per_page=500' ) ) {
+										while ( bp_group_members() ) {
+											bp_group_the_member(); 
+											echo bp_group_member_link() . ", ";
+										}
+										}
+									?>
+								</p>
+							</div>
 						</div>
 						<script>
 						$(document).ready( function () {
@@ -1842,30 +2312,23 @@ CHIP
 						$ucpt_time_count++;
 						}
 						?>
-						
-						<div class="division">
-							<h3>Last Modification</h3>
-							<p>
-								<?php echo ucpt_custom_field_meta('ucpt_data_edit_log'); ?>
-							</p>
-						</div>
-						
-						<div class="division">
-							<h3>Contributing Community Participants</h3>
-							<p>
-								<?php 
-									if ( bp_group_has_members( 'group_id='.bp_get_group_id().'&exclude_admins_mods=0&per_page=500' ) ) {
-									while ( bp_group_members() ) {
-										bp_group_the_member(); 
-										echo bp_group_member_link() . ", ";
-									}
-									}
-								?>
-							</p>
-						</div>
-						
+					
 						<?php
 						ucpt_credits();
+						?>
+		
+						<script language="javascript">
+							function printX(printDIV) {
+								document.body.style.backgroundImage = "url('')";
+								document.body.style.backgroundColor = "white";
+								var printX = document.all.item(printDIV).innerHTML;
+								var printOG = document.body.innerHTML;
+								document.body.innerHTML = printX;								
+								window.print();
+								location.reload();
+							}
+						</script>
+					<?php
 					}
 				}
 			}
@@ -1906,7 +2369,7 @@ CHIP
 					$ucpt_avatar = 	bp_get_group_avatar( 'type=full&width=15&height=15' );
 					
 					$ucpt_output_chip .= "<div style='background-color: #ffffff; margin: 15px 30px 15px 30px; padding: 20px; '>";
-					$ucpt_output_chip .= "<div style='background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(" . $ucpt_cover . "); background-size:100%; width=100%; min-height: 150px; padding: 30px;'><div style='font-size: 32px; color: #fff;'>" . custom_field_chip('ucpt_friendly') . "</div><br /><div style='font-size: 18px; color: #efefef;'>" . $ucpt_avatar . " " . $ucpt_group_name . "</div><br/><div style='font-size: 10px; color: #efefef;'>" . $ucpt_perma ."</div></div><br />";
+					$ucpt_output_chip .= "<div style='background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(" . $ucpt_cover . "); background-size:100%; width=100%; min-height: 150px; padding: 30px;'><div style='font-size: 32px; color: #fff;'>" . custom_field_chip('ucpt_friendly') . "</div><br /><div style='font-size: 18px; color: #efefef;'>" . $ucpt_avatar . " " . $ucpt_group_name . "</div><br/><div style='font-size: 10px; color: #efefef;'>" . $ucpt_perma ."</div></div><br />";
 					$ucpt_output_chip .= '<p><form method="get" action="' .  $ucpt_perma . 'chip"><button type="submit">Access CHIP Data for ' .  $ucpt_group_name . '</button></form></p>';
 					$ucpt_output_chip .= "</div>";
 				endwhile;		
@@ -2085,7 +2548,7 @@ Performance Management
 					</p>
 					<?php
 					}
-					echo "<div style='background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(" . $ucpt_cover . "); background-size:100%; width=100%; min-height: 150px; padding: 30px;'><div style='font-size: 32px; color: #fff;'>Performance Management</div><br /><div style='font-size: 18px; color: #efefef;'>" . $ucpt_group_name . "</div><br/><div style='font-size: 10px; color: #efefef;'>" . $ucpt_perma ."</div></div>";
+					echo "<div style='background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url(" . $ucpt_cover . "); background-size:100%; width=100%; min-height: 150px; padding: 30px;'><div style='font-size: 32px; color: #fff;'>Performance Management</div><br /><div style='font-size: 18px; color: #efefef;'>" . $ucpt_group_name . "</div><br/><div style='font-size: 10px; color: #efefef;'>" . $ucpt_perma ."</div></div>";
 					?>
 					<script>
 					$(document).ready( function () {
@@ -2825,7 +3288,7 @@ Quality Improvement
 				function __construct() {
 					$args = array(
 						'slug' => 'qi',
-						'name' => 'Quality',
+						'name' => 'QI',
 						'nav_item_position' => 42
 					);
 					parent::init( $args );
@@ -2906,7 +3369,12 @@ Quality Improvement
 					<?php
 					}
 					if (ucpt_custom_field_meta('ucpt_qi') == "No" or ucpt_custom_field_meta('ucpt_qi') =="") {
-						echo "<div class='division'><p>This group does not yet qualify for Qi. To turn on Quality Improvement, visit the Performance Management settings for your group under the Manage tab (only visible to signed-in group administrators).</p></div>";
+					?>
+						<div class='division'>
+						<p>This group does not yet qualify for Qi. To turn on Quality Improvement, visit the Performance Management settings for your group under the Manage tab (only visible to signed-in group administrators).</p>
+						<form method="get" action="<?php $ucpt_perma = bp_get_group_permalink( $bp->groups->current_group ); echo $ucpt_perma; ?>admin/pm"><button type="submit" align="right">Turn QI On/Off</button></form>
+						</div>
+					<?php
 					}
 					if (ucpt_custom_field_meta('ucpt_qi') == "Yes") {	
 						$qi_reps = ucpt_custom_field_meta('ucpt_qi_number'); 
@@ -3057,7 +3525,7 @@ Embed
 					$args = array(
 						'slug' => 'linked',
 						'name' => 'Linked',
-						'nav_item_position' => 45
+						'nav_item_position' => 48
 					);
 					parent::init( $args );
 				}
@@ -3150,7 +3618,7 @@ Location
 					$args = array(
 						'slug' => 'location',
 						'name' => 'Location',
-						'nav_item_position' => 45
+						'nav_item_position' => 47
 					);
 					parent::init( $args );
 				}
@@ -3294,7 +3762,7 @@ Funding Details
 					$args = array(
 						'slug' => 'funding',
 						'name' => 'Funding',
-						'nav_item_position' => 100
+						'nav_item_position' => 46
 					);
 					parent::init( $args );
 				}
@@ -3375,7 +3843,7 @@ Funding Details
 						<?php
 						}
 						?>
-						<div style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('<?php echo $ucpt_cover; ?>'); background-size:100%; width=100%; min-height: 150px; padding: 30px;"><div style="font-size: 32px; color: #fff;">Health Improvement Funding</div><br /><div style="font-size: 18px; color: #efefef;">"<?php echo $ucpt_group_name; ?>"</div><br/><div style="font-size: 10px; color: #efefef;">"<?php echo $ucpt_perma; ?>"</div></div>
+						<div style="background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('<?php echo $ucpt_cover; ?>'); background-size:100%; width=100%; min-height: 150px; padding: 30px;"><div style="font-size: 32px; color: #fff;">Health Improvement Funding</div><br /><div style="font-size: 18px; color: #efefef;">"<?php echo $ucpt_group_name; ?>"</div><br/><div style="font-size: 10px; color: #efefef;">"<?php echo $ucpt_perma; ?>"</div></div>
 						<div class="division">
 						<p><h3>Current Grant Name:</h3> <?php echo ucpt_custom_field_meta("ucpt_grant"); ?></p>
 						</div>
@@ -3404,19 +3872,49 @@ Funding Details
 		}
 			
 	add_action( 'bp_include', 'ucpt_funding_page' );
+	
+/*
+Help
+*/
 
+	function custom_field_help($meta_key='') {
+		return groups_get_groupmeta( bp_get_group_id(), $meta_key) ;
+	}
+
+	function ucpt_help( $group_id = NULL ) {
+		if ( class_exists( 'BP_Group_Extension' ) ) :
+			class UCPT_Help extends BP_Group_Extension {
+				var $enable_create_step = false;
+				var $enable_nav_item = true;
+				var $enable_edit_item = true;
+				function __construct() {
+					$args = array(
+						'slug' => 'help',
+						'name' => 'Help',
+						'nav_item_position' => 1
+					);
+					parent::init( $args );
+				}
+				function display( $group_id = NULL ) {
+					/* Use this function to display the actual content of your group extension when the nav item is selected */
+					global $bp;	
+					?>
+					<div class="division">
+						<h3>Help</h3>
+						<p>A documentation page is on the way!</p>
+					</div>
+				<?php
+				}
+			}
+
+			bp_register_group_extension( 'UCPT_Help' );
+			 
+		endif;
+	}
+		
+	add_action( 'bp_include', 'ucpt_help' );
+
+// Keep Help @ Bottom for Easy Editing + Customization Until Split
+// 
+// 
 // End Modules
-
-/**
-  *Compatability Helpers
-  */
-
-// Thanks to https://www.wpbeginner.com
-
-function ucpt_gd( $editors ) {
-$gd_editor = ‘WP_Image_Editor_GD’;
-$editors = array_diff( $editors, array( $gd_editor ) );
-array_unshift( $editors, $gd_editor );
-return $editors;
-}
-add_filter( ‘wp_image_editors’, ‘ucpt_gd’ );
