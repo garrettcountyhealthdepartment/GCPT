@@ -1,0 +1,27 @@
+.division {
+	background-color: #fafafa; 
+	margin: 15px; 
+	padding: 15px;
+}
+.archived {
+	color: #fff;
+	padding: 5px;
+	margin: 10px;
+	background-color: #b30000;
+	text-align: center;
+}
+.nest-section {
+	background-color: #fff;
+	padding: 25px;
+	border: #eee 1px solid;
+}
+.nest {
+	margin: 25px;
+}
+.mini-table { 
+	font-size: 7px;
+	overflow: hidden; 
+	overflow-x: auto;
+	text-overflow: ellipsis; 
+	word-wrap: break-word;
+}
